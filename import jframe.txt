@@ -1,0 +1,5 @@
+ welcome1 wel=new welcome1();
+        wel.setVisible(true);
+        wel.pack();
+        wel.setLocationRelativeTo(null);
+            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

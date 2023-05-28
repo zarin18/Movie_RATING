@@ -1,0 +1,27 @@
+private void regisActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+        try{
+            try ( //Class.forName("com.mysql.jdbc.Driber");
+                    {
+                String sql="insert into passenger values(?,?,?,?,?,?,?,?,?,?)";
+                PreparedStatement rstmt=conn.prepareStatement(sql);
+                rstmt.setInt(1,12);
+                rstmt.setString(2,name.getText());
+                rstmt.setString(3,address.getText());
+                rstmt.setString(4,pass.getText());
+                rstmt.setString(5,repass.getText());
+                rstmt.setString(6,birth.getText());
+                rstmt.setString(7,add.getText());
+                rstmt.setInt(8,Integer.parseInt(post1.getText()));
+                rstmt.setInt(9,Integer.parseInt(nid.getText()));
+                rstmt.setInt(10,Integer.parseInt(mobile.getText()));
+                rstmt.executeUpdate();
+                JOptionPane.showMessageDialog(null,"insertion successful");
+            }
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null,e);
+        }
+    }
+Chat Conversation End
+Type a message...
